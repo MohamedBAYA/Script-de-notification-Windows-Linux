@@ -1,5 +1,19 @@
 # Blue Team – Intrusion Detection Script (Windows & Linux)
 
+## 🐍 Prérequis
+
+Ce projet nécessite :
+
+- **Python 3.10+**
+- Les dépendances mentionnées dans `install/requirements_windows.txt` ou `install/requirements_linux.txt`
+
+### Installer Python
+
+Télécharge Python depuis le site officiel :
+➡️ [https://www.python.org/downloads/](https://www.python.org/downloads/)
+
+⚠️ Sur Windows, cocher la case : “Add Python to PATH” lors de l'installation.
+
 Ce projet fournit **un script Python universel** permettant de détecter à titre d’exemple (POC) :
 
 - des tentatives d’authentification SSH échouées sous Linux

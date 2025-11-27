@@ -1,0 +1,4 @@
+# Pas de dépendance Python pour Linux.
+# notify-send doit être installé :
+# sudo apt install libnotify-bin -y
+# --- IGNORE ---
