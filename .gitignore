@@ -1,0 +1,91 @@
+# ============================
+# PYTHON
+# ============================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment folders
+venv/
+env/
+.venv/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+*.egg-info/
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints
+
+# ============================
+# WINDOWS
+# ============================
+
+# PowerShell history
+*.pshistory
+*.ps1xml
+
+# ============================
+# LINUX / SHELL
+# ============================
+
+# Shell script logs
+*.log
+
+# ============================
+# VISUAL STUDIO CODE
+# ============================
+
+.vscode/
+*.code-workspace
+
+# ============================
+# OS GENERATED FILES
+# ============================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ============================
+# PROJECT SPECIFIC
+# ============================
+
+# Temporary files
+tmp/
+temp/
+
+# Files created during runtime
+*.pid
+*.tmp
+*.log
