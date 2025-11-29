@@ -1,0 +1,13 @@
+{
+  "enable_linux_detection": true,
+  "enable_windows_detection": true,
+  "notifications": {
+    "title": "Alerte Intrusion",
+    "enable_notifications": true
+  },
+  "logging": {
+    "enabled": true,
+    "file_name": "intrusion_detection.log",
+    "json_format": false
+  }
+}
