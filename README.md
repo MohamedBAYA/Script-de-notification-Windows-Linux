@@ -105,6 +105,11 @@ python -m pip install -r install/requirements_windows.txt
 python .\src\detect_intrusionV1-3.py
 ```
 
+### Vous devriez recevoir une notification de bureau indiquant une tentative d'intrusion.
+
+Exemple de notification sous Windows :
+![Notification Windows](img/Exemple_Windows.jpg)
+
 ---
 
 ## Structure du projet
