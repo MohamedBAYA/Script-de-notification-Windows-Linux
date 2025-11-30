@@ -58,7 +58,7 @@ source venv/bin/activate
 #### Étape 4 : Lancer le script principal
 
 ```bash
-python src/detect_intrusionV1-1.py
+python src/detect_intrusionV1-3.py
 ```
 
 **Pour tester les alertes :**
@@ -102,7 +102,7 @@ python -m pip install -r install/requirements_windows.txt
 ### Lancer le script :
 
 ```powershell
-python .\src\detect_intrusionV1-2.py
+python .\src\detect_intrusionV1-3.py
 ```
 
 ---
@@ -111,7 +111,7 @@ python .\src\detect_intrusionV1-2.py
 
 ```bash
 src/
-└── detect_intrusionV1-0.py     # Script principal (universel Windows + Linux)
+└── detect_intrusionV1-3.py     # Script principal (universel Windows + Linux)
 
 install/
 ├── requirements_linux.txt      # Dépendances Python Linux
