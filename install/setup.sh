@@ -13,15 +13,22 @@ if [ "$OS" = "Linux" ]; then
     echo "[*] Activation du service SSH..."
     sudo systemctl enable --now ssh
     
+    echo "[*] Création des répertoires nécessaires..."
+    mkdir -p logs/
+    mkdir -p config/
+    
     echo "[*] Ajustement des droits sur les répertoires..."
     REAL_USER=${SUDO_USER:-$(whoami)}
     sudo chown -R $REAL_USER:$REAL_USER logs/
     sudo chown -R $REAL_USER:$REAL_USER config/
     
+    echo "[*] Création de l'environnement virtuel..."
+    python3 -m venv venv
+    
     echo "[*] Installation terminée."
     echo "[*] Pour lancer le script :"
     echo "    source venv/bin/activate"
-    echo "    python src/detect_intrusionV1-0.py"
+    echo "    python src/detect_intrusionV1-1.py"
     
 else
     echo "[ERREUR] OS non supporté par ce script d'installation."

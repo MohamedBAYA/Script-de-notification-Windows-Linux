@@ -28,6 +28,7 @@ Le script s’adapte automatiquement à l’OS sur lequel il s’exécute (Windo
 #### Étape 1 - Clonez le dépôt sur Linux (Ubuntu/Debian)
 
 ```bash
+sudo apt install git -y
 git clone https://github.com/MohamedBAYA/Script-de-notification-Windows-Linux.git
 cd Script-de-notification-Windows-Linux
 ```
