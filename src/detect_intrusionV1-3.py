@@ -12,7 +12,7 @@ Sur Windows :
     - Envoie une notification + enregistre dans un fichier log
 
 Auteur : Mohamed BAYA
-Version : 1.0
+Version : 1.3
 """
 
 import platform
@@ -157,13 +157,16 @@ def notify_windows(msg: str) -> None:
     if not CONFIG.get("notifications", {}).get("enable_notifications", True):
         return
     try:
-        from win10toast import ToastNotifier
+        from notifypy import Notify
 
-        toaster = ToastNotifier()
-        title = CONFIG.get("notifications", {}).get("title", "Alerte Intrusion")
-        toaster.show_toast(title, sanitize(msg), duration=5)
+        notification = Notify()
+        notification.title = CONFIG.get("notifications", {}).get(
+            "title", "Alerte Intrusion"
+        )
+        notification.message = sanitize(msg)
+        notification.send()
     except Exception as e:
-        print(f"[ERREUR] Impossible d'afficher une notification Windows : {e}")
+        print(f"[AVERTISSEMENT] Notification échouée : {e}")
 
 
 def get_notifier() -> Callable[[str], None]:
