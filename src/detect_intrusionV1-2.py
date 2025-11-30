@@ -292,10 +292,19 @@ def detect_windows(notify: Callable[[str], None]) -> None:
                 last_record = event.RecordNumber
 
                 if event.EventID == 4625:
-                    inserts = event.StringInserts
-                    user = inserts[5] if inserts and len(inserts) >= 6 else "Inconnu"
+                    # Récupère le message brut pour plus de fiabilité
+                    message = event.StringInserts
 
-                    msg = f"Échec connexion Windows – user={user}"
+                    # Extrait user et IP de manière plus robuste
+                    user = "Inconnu"
+                    ip = "Inconnu"
+
+                    if message and len(message) >= 6:
+                        user = message[5]  # Target User Name
+                    if message and len(message) >= 20:
+                        ip = message[19]  # Source Network Address
+
+                    msg = f"Échec connexion Windows – user={user}, ip={ip}"
                     print("[ALERTE]", msg)
                     notify(msg)
                     write_log(msg)

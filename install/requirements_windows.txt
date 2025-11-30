@@ -1,4 +1,3 @@
-win10toast==0.9
-pywin32==305
-# optionnel : pour des messages colorés dans la console Windows
-colorama==0.4.6
+win10toast
+pywin32
+colorama
