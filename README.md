@@ -129,8 +129,6 @@ config/
 logs/
 └── intrusion_detection.log     # Fichier de logs (créé au runtime)
 
-run_linux.sh                    # Lanceur Linux (alternative à install/setup.sh)
-run_windows.ps1                 # Lanceur Windows
 README.md                       # Ce fichier
 ```
 
