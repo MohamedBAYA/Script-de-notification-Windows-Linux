@@ -79,7 +79,12 @@ ssh test@<IP_de_la_machine>
 ### Vous devriez recevoir une notification de bureau indiquant une tentative d'intrusion.
 
 Exemple de notification sous Linux :
-![Notification Linux](img/Exemple.png)
+
+<div align="center">
+
+![Notification Linux](img/Exemple_Linux.png)
+
+</div>
 
 ---
 
@@ -108,7 +113,12 @@ python .\src\detect_intrusionV1-3.py
 ### Vous devriez recevoir une notification de bureau indiquant une tentative d'intrusion.
 
 Exemple de notification sous Windows :
+
+<div align="center">
+
 ![Notification Windows](img/Exemple_Windows.jpg)
+
+</div>
 
 ---
 
