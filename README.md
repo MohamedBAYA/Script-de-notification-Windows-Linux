@@ -102,7 +102,7 @@ python -m pip install -r install/requirements_windows.txt
 ### Lancer le script :
 
 ```powershell
-python .\src\detect_intrusionV1-1.py
+python .\src\detect_intrusionV1-2.py
 ```
 
 ---
