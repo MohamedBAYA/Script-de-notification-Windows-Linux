@@ -25,26 +25,60 @@ Le script s’adapte automatiquement à l’OS sur lequel il s’exécute (Windo
 
 ## 🚀 Installation & utilisation
 
-### Linux (Ubuntu/Debian)
+#### Étape 1 - Clonez le dépôt sur Linux (Ubuntu/Debian)
 
 ```bash
-git clone <URL_DU_REPO>
+git clone https://github.com/MohamedBAYA/Script-de-notification-Windows-Linux.git
 cd Script-de-notification-Windows-Linux
 ```
 
-### Option 1 – Script d’installation complet :
+#### Étape 2 : Lancez l'installation automatique
 
 ```bash
 chmod +x install/setup.sh
 ./install/setup.sh
 ```
 
-### Option 2 – Manuel (si vous préférez garder le contrôle) :
+### Ce script va :
+
+- Installer les dépendances système (python3, libnotify, openssh-server, etc.)
+- Créer et configurer l'environnement virtuel
+- Ajuster les permissions sur les répertoires
+
+**Note :** Sur la partie Linux, `python3.12-venv` est requis pour créer un environnement virtuel.
+
+#### Étape 3 : Créez et activez l'environnement virtuel
 
 ```bash
-chmod +x run_linux.sh
-./run_linux.sh
+python3 -m venv venv
+source venv/bin/activate
 ```
+
+#### Étape 4 : Lancer le script principal
+
+```bash
+python src/detect_intrusionV1-0.py
+```
+
+**Pour tester les alertes :**
+Ouvrez un deuxième terminal et lancez :
+
+```bash
+ssh test@localhost
+(Entrez un mot de passe incorrect pour générer une alerte)
+```
+
+Ou vous pouvez également le faire depuis une autre machine en ciblant l'IP de la machine où le script tourne :
+
+```bash
+ssh test@<IP_de_la_machine>
+(Entrez un mot de passe incorrect pour générer une alerte)
+```
+
+### Vous devriez recevoir une notification de bureau indiquant une tentative d'intrusion.
+
+Exemple de notification sous Linux :
+![Notification Linux](img/Exemple.png)
 
 ---
 

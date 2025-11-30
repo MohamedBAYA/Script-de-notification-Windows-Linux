@@ -103,10 +103,10 @@ def check_permissions() -> None:
         result = subprocess.run(
             ["journalctl", "-u", "ssh", "-n", "1"],
             capture_output=True,
-            stderr=subprocess.PIPE,
+            text=True,
         )
 
-        if "Permission denied" in result.stderr.decode():
+        if "Permission denied" in (result.stderr or ""):
             print("[ERREUR] Accès aux logs SSH refusé.")
             print("[INFO] Ajoute-toi au groupe 'adm' : sudo usermod -aG adm $USER")
             write_log("Permissions insuffisantes pour journalctl")
